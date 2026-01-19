@@ -1,25 +1,21 @@
 /* =========================================
-   Aadil's Portfolio - Earthy Tech Theme 
-   Adheres to Step 1 Assignment Requirements
+   Aadil's Portfolio - Earthy Tech Theme
+   Fixes: Centered Container & Visible Boxes
    ========================================= */
 
-/* GLOBAL STYLES */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sans-serif requirement */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #fcfaf7; /* Warm Parchment Background */
-    color: #333333; /* Deep Charcoal Text */
-    line-height: 1.45; /* Spacing requirement (1.15-1.5) */
+    background-color: #fcfaf7; /* Warm Parchment */
+    color: #333333;
+    line-height: 1.45;
 }
 
-/* NAVIGATION - One-click access from all pages */
+/* NAVIGATION */
 nav {
     background-color: #2d4739; /* Deep Forest Green */
     padding: 1.2rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 nav a {
@@ -27,51 +23,45 @@ nav a {
     margin: 0 1.2rem;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d9c5b2; /* Light Sand hover */
+    color: #d9c5b2;
 }
 
-/* CONTAINER - Narrow columns (~10 words/line) & Justified text */
+/* CONTAINER - Centered and Narrow */
 .container {
     max-width: 650px; 
-    margin: 3rem auto;
+    width: 90%; 
+    margin: 3rem auto; /* THE FIX: Centers the container */
     background: #ffffff;
     padding: 3rem;
-    text-align: justify; /* Requirement: Justify your text */
-    box-shadow: 0 2px 15px rgba(0,0,0,0.03); 
+    text-align: justify; /* Assignment Requirement */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
     border-radius: 4px;
 }
 
-/* HEADERS - Consistent Hierarchy */
-h1, h2, h3 {
-    color: #2d4739; 
-    margin-top: 2rem;
-}
-
+/* HEADERS */
 h1 {
-    font-size: 2.2rem;
-    border-bottom: 2px solid #a66144; /* Terracotta accent line */
+    color: #2d4739;
+    border-bottom: 2px solid #a66144;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 1.4rem;
+    color: #2d4739;
     border-bottom: 1px solid #e0dcd6;
     padding-bottom: 0.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 2.2rem;
 }
 
-/* LINKS - Earthy Accent */
+/* LINKS */
 a {
-    color: #a66144; /* Muted Terracotta */
+    color: #a66144;
     text-decoration: none;
     font-weight: 600;
 }
@@ -80,23 +70,17 @@ a:hover {
     text-decoration: underline;
 }
 
-/* PROJECT GRID SYSTEM */
-.project {
-    margin-top: 3rem;
-    padding-top: 1rem;
-}
-
+/* PROJECT BOXES - The Placeholder Fix */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 1.5rem;
-    align-items: start;
 }
 
 .project-image {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 220px; /* THE FIX: Keeps the boxes visible without images */
     background-color: #f0ede9; /* Light Stone */
     display: flex;
     align-items: center;
@@ -105,39 +89,23 @@ a:hover {
     color: #8c857d;
     font-style: italic;
     font-size: 0.85rem;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* LISTS */
 ul {
     padding-left: 1.5rem;
-    margin-top: 0.5rem;
 }
 
 li {
     margin-bottom: 0.6rem;
 }
 
-/* RESPONSIVE DESIGN */
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 800px) {
     .project-grid {
-        grid-template-columns: 1fr; /* Stack on mobile */
+        grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 600px) {
     .container {
-        margin: 1rem;
         padding: 1.5rem;
-    }
-    nav a {
-        margin: 0 0.5rem;
-        font-size: 0.85rem;
     }
 }
