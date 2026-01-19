@@ -1,13 +1,18 @@
-/* GLOBAL STYLES - Earthy Professional Theme */
+/* =========================================
+   Aadil's Portfolio - Earthy Tech Theme 
+   Adheres to Step 1 Assignment Requirements
+   ========================================= */
+
+/* GLOBAL STYLES */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean Sans-Serif */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sans-serif requirement */
     margin: 0;
-    background-color: #fcfaf7; /* Warm Parchment */
-    color: #333333; /* Deep Charcoal for readability */
-    line-height: 1.45; /* Meets 1.15-1.5 requirement */
+    background-color: #fcfaf7; /* Warm Parchment Background */
+    color: #333333; /* Deep Charcoal Text */
+    line-height: 1.45; /* Spacing requirement (1.15-1.5) */
 }
 
-/* NAVIGATION - One-click access */
+/* NAVIGATION - One-click access from all pages */
 nav {
     background-color: #2d4739; /* Deep Forest Green */
     padding: 1.2rem;
@@ -24,32 +29,33 @@ nav a {
     font-weight: bold;
     font-size: 0.95rem;
     letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d9c5b2; /* Light Sand hover color */
+    color: #d9c5b2; /* Light Sand hover */
 }
 
-/* CONTAINER - Narrow columns (~10 words per line) */
+/* CONTAINER - Narrow columns (~10 words/line) & Justified text */
 .container {
-    max-width: 650px; /* Narrower for the ~10 words/line rule */
+    max-width: 650px; 
     margin: 3rem auto;
     background: #ffffff;
     padding: 3rem;
-    text-align: justify; /* Assignment requirement */
-    box-shadow: 0 2px 15px rgba(0,0,0,0.03); /* Very subtle depth */
+    text-align: justify; /* Requirement: Justify your text */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.03); 
     border-radius: 4px;
 }
 
-/* HEADERS - Semantic hierarchy */
+/* HEADERS - Consistent Hierarchy */
 h1, h2, h3 {
-    color: #2d4739; /* Forest Green */
+    color: #2d4739; 
     margin-top: 2rem;
 }
 
 h1 {
     font-size: 2.2rem;
-    border-bottom: 2px solid #a66144; /* Terracotta accent */
+    border-bottom: 2px solid #a66144; /* Terracotta accent line */
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 1.5rem;
@@ -63,7 +69,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* LINKS */
+/* LINKS - Earthy Accent */
 a {
     color: #a66144; /* Muted Terracotta */
     text-decoration: none;
@@ -74,18 +80,24 @@ a:hover {
     text-decoration: underline;
 }
 
-/* PROJECT GRID */
+/* PROJECT GRID SYSTEM */
+.project {
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 1.5rem;
+    align-items: start;
 }
 
 .project-image {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: #f0ede9; /* Light Stone color */
+    background-color: #f0ede9; /* Light Stone */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,24 +105,39 @@ a:hover {
     color: #8c857d;
     font-style: italic;
     font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* LISTS */
 ul {
     padding-left: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 li {
     margin-bottom: 0.6rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         margin: 1rem;
         padding: 1.5rem;
     }
-    .project-grid {
-        grid-template-columns: 1fr;
+    nav a {
+        margin: 0 0.5rem;
+        font-size: 0.85rem;
     }
 }
