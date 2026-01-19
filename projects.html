@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Aadil</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f6f6f6;
+            color: #222;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: white;
+            padding: 2.5rem;
+            line-height: 1.35;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project {
+            margin-top: 2.5rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+            border: 1px solid #ccc;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        @media (max-width: 800px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="projects.html">Projects</a>
+</nav>
+
+<div class="container">
+    <h1>Projects</h1>
+
+    <p>
+        This portfolio highlights selected projects that demonstrate my experience
+        in data analysis, systems design, and applied computer science.
+    </p>
+
+    <!-- PROJECT 1 -->
+    <div class="project" id="biomedical-pipeline">
+        <h2>Biomedical Data Analysis Pipeline</h2>
+
+        <div class="project-grid">
+            <div>
+                <p>
+                    Designed and implemented a data processing pipeline to support
+                    longitudinal research using wearable physiological sensors.
+                </p>
+
+                <ul>
+                    <li>Streamlined ingestion of multi-modal bio-signal data.</li>
+                    <li>Implemented feature extraction for downstream statistical analysis.</li>
+                    <li>Designed pipeline to support noisy, real-world data outside laboratory conditions.</li>
+                    <li>Informed experimental design through extensive literature review.</li>
+                </ul>
+
+                <p>
+                    <strong>Skills:</strong> Python, data pipelines, signal processing, research methods
+                </p>
+            </div>
+
+            <div class="project-image">
+                Image / diagram placeholder
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project" id="urbanism-analysis">
+        <h2>Urbanism Data Analysis & Policy Advocacy</h2>
+
+        <div class="project-grid">
+            <div>
+                <p>
+                    Conducted a data-driven analysis of parking utilization and zoning
+                    policy to support arguments for increased housing density.
+                </p>
+
+                <ul>
+                    <li>Analyzed county-level parking and land-use datasets.</li>
+                    <li>Built tools to generate clear visual and statistical arguments.</li>
+                    <li>Translated technical findings for non-technical stakeholders.</li>
+                    <li>Used analysis in real-world advocacy and city council discussions.</li>
+                </ul>
+
+                <p>
+                    <strong>Skills:</strong> Data analysis, visualization, policy analysis, communication
+                </p>
+            </div>
+
+            <div class="project-image">
+                Image / chart placeholder
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project" id="database-project">
+        <h2>Relational Database System (Facebook-Like Platform)</h2>
+
+        <div class="project-grid">
+            <div>
+                <p>
+                    Designed and implemented a relational database for a social-network-style
+                    application as part of a database systems course.
+                </p>
+
+                <ul>
+                    <li>Designed normalized schemas for users, posts, friendships, and interactions.</li>
+                    <li>Implemented complex SQL queries for feeds, relationships, and analytics.</li>
+                    <li>Focused on data integrity, constraints, and query performance.</li>
+                </ul>
+
+                <p>
+                    <strong>Skills:</strong> SQL, relational schema design, database systems
+                </p>
+            </div>
+
+            <div class="project-image">
+                Schema / UI screenshot placeholder
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
