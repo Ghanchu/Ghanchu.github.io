@@ -1,18 +1,17 @@
 /* =========================================
    Aadil's Portfolio - Muted Earth Theme
-   Sober, Professional, and Easy on the Eyes
    ========================================= */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdfbf9; /* Lighter, cleaner cream */
-    color: #3e3e3e; /* Muted grey-black */
+    background-color: #fdfbf9;
+    color: #3e3e3e;
     line-height: 1.45;
 }
 
-/* NAVIGATION - Deep Sage Gray-Green */
+/* NAVIGATION */
 nav {
     background-color: #4a5d4e; 
     padding: 1.2rem;
@@ -28,10 +27,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #d1c7bc; /* Muted sand hover */
+    color: #d1c7bc;
 }
 
-/* CONTAINER - Centered & Justified per Rubric */
+/* CONTAINER */
 .container {
     max-width: 650px; 
     width: 90%; 
@@ -39,14 +38,14 @@ nav a:hover {
     background: #ffffff;
     padding: 3rem;
     text-align: justify; 
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03); /* Softer shadow */
-    border-radius: 2px; /* Sharper, cleaner corners */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border-radius: 2px;
 }
 
-/* HEADERS - Deep Sage */
+/* HEADERS */
 h1 {
     color: #4a5d4e;
-    border-bottom: 2px solid #8c7355; /* Bronze accent */
+    border-bottom: 2px solid #8c7355;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 1.5rem;
@@ -63,47 +62,36 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* LINKS - Muted Bronze */
-a {
-    color: #8c7355;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    color: #4a5d4e;
-    text-decoration: underline;
-}
-
-/* PROJECT BOXES */
+/* PROJECT BOXES - Updated for dynamic image fitting */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 1.5rem;
+    align-items: start; /* Ensures text and image align at the top */
 }
 
 .project-image {
     width: 100%;
-    height: 220px; 
-    background-color: #f5f3f0; /* Very light stone */
+    height: auto; /* Changed from 220px to auto to fit your images */
+    background-color: #f5f3f0;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #e8e4df;
-    color: #a39d96;
-    font-style: italic;
-    font-size: 0.85rem;
 }
 
-/* LISTS */
-ul {
-    padding-left: 1.5rem;
+/* Ensure images inside the boxes don't overflow */
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-li {
-    margin-bottom: 0.6rem;
-}
+/* LISTS & LINKS */
+a { color: #8c7355; font-weight: 600; }
+ul { padding-left: 1.5rem; }
+li { margin-bottom: 0.6rem; }
 
 /* RESPONSIVE */
 @media (max-width: 800px) {
@@ -113,10 +101,9 @@ li {
 
 /* Decorative Image Style - Thick Accent Border */
 .decorative-image {
-    border: 4px solid #8c7355; /* Thick Bronze Border */
-    border-radius: 8px;        /* Rounded corners */
-    padding: 5px;              /* Tiny gap between image and border */
-    background-color: white;   /* Makes the gap look like a frame */
-    display: block;
-    margin: 0 auto;
+    border: 4px solid #8c7355;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: white;
+    box-sizing: border-box; /* Keeps the border from adding to width */
 }
