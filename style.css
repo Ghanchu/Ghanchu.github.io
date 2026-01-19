@@ -110,3 +110,13 @@ li {
     .project-grid { grid-template-columns: 1fr; }
     .container { padding: 1.8rem; margin: 1.5rem auto; }
 }
+
+/* Decorative Image Style - Thick Accent Border */
+.decorative-image {
+    border: 4px solid #8c7355; /* Thick Bronze Border */
+    border-radius: 8px;        /* Rounded corners */
+    padding: 5px;              /* Tiny gap between image and border */
+    background-color: white;   /* Makes the gap look like a frame */
+    display: block;
+    margin: 0 auto;
+}
